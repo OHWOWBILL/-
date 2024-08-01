@@ -1,64 +1,106 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* 基本样式重置 */
+* {
     margin: 0;
     padding: 0;
-    color: #333;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'SimSun', 'STSong', 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 确保body至少占满整个视口高度 */
+}
+
+/* 头部样式 */
 header {
-    background-color: #4a4a4a;
-    color: #fff;
-    padding: 1rem 0;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
 }
 
 nav ul li {
-    margin: 0 10px;
+    display: inline;
+    margin-right: 20px;
 }
 
 nav ul li a {
-    color: #fff;
     text-decoration: none;
+    color: #333;
 }
 
+/* 主要内容样式 */
 main {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    flex: 1; /* 让main元素占据剩余的空间 */
+    padding: 2rem;
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
 }
 
 h1, h2, h3 {
-    color: #2c3e50;
+    margin-bottom: 1rem;
 }
 
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+/* 联系表单样式 */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+#contact-form button {
+    align-self: flex-start;
+    padding: 0.5rem 1rem;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* 页脚样式 */
 footer {
-    background-color: #4a4a4a;
-    color: #fff;
+    background-color: #333;
+    color: white;
     text-align: center;
-    padding: 1rem 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    padding: 1rem;
+    margin-top: auto; /* 将页脚推到底部 */
 }
 
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.2rem;
 }
