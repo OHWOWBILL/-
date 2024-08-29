@@ -27,20 +27,7 @@
             <h1>欢迎莅临潜蛟阁</h1>
             <p>此隅载吾作，广迎四海八方客</p>
         </section>
-        <section id="blog-posts">
-            <h2>最新文章</h2>
-            <ul class="post-list">
-                {% for post in site.posts limit:5 %}
-                <li>
-                    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                    <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
-                    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-                    <a href="{{ post.url | relative_url }}" class="read-more">阅读更多</a>
-                </li>
-                {% endfor %}
-            </ul>
-            <a href="/archive" class="all-posts-link">查看所有文章</a>
-        </section>
+
         <section id="about">
             <h2>关于我</h2>
             <p>1</p>
